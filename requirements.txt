@@ -1,4 +1,5 @@
 flask
 requests
 gunicorn
-requests
+flask-sqlalchemy
+psycopg2-binary   # Para PostgreSQL no Render
