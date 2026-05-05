@@ -1,0 +1,17 @@
+<h1>Consulta CEP</h1>
+
+<form method="POST">
+    <input name="cep" placeholder="Digite o CEP">
+    <button>Buscar</button>
+</form>
+
+{% if result %}
+    {% if result.erro %}
+        <p style="color:red;">{{ result.erro }}</p>
+    {% else %}
+        <p><b>Logradouro:</b> {{ result.logradouro }}</p>
+        <p><b>Bairro:</b> {{ result.bairro }}</p>
+        <p><b>Cidade:</b> {{ result.cidade }}</p>
+        <p><b>Estado:</b> {{ result.estado }}</p>
+    {% endif %}
+{% endif %}
